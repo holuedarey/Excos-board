@@ -37,39 +37,35 @@
                             <div class="containers" ion-padding>
                                 <div class="form-group">
                                     <label position="floating">Name</label>
-                                    <input class="form-control" type="text" formControlName="name"
-                                        [class.invalid]="!excoForm.controls.name.valid && (excoForm.controls.name.dirty || submitAttempt)" />
+                                    <input class="form-control" type="text" formControlName="name" />
                                 </div>
 
                                 <div class="form-group">
                                     <label position="floating">Email</label>
-                                    <input class="form-control" type="text" formControlName="email"
-                                        [class.invalid]="!excoForm.controls.email.valid && (excoForm.controls.email.dirty || submitAttempt)" />
+                                    <input class="form-control" type="text" formControlName="email"  />
                                 </div>
 
 
                                 <div class="form-group">
                                     <label position="floating">Post</label>
-                                    <input class="form-control" type="text" formControlName="post"
-                                        [class.invalid]="!excoForm.controls.post.valid && (excoForm.controls.post.dirty || submitAttempt)" />
+                                    <input class="form-control" type="text" formControlName="post" />
                                 </div>
                                 <div class="form-group">
                                     <label position="floating">Department</label>
-                                    <input class="form-control" type="text" formControlName="department"
-                                        [class.invalid]="!excoForm.controls.department.valid && (excoForm.controls.department.dirty || submitAttempt)" />
+                                    <input class="form-control" type="text" formControlName="department"  />
                                 </div>
                                 <div class="form-group">
                                     <label position="floating">Mobile</label>
-                                    <input class="form-control" type="text" formControlName="mobile"
-                                        [class.invalid]="!excoForm.controls.mobile.valid && (excoForm.controls.mobile.dirty || submitAttempt)" />
+                                    <input class="form-control" type="text" formControlName="mobile"  />
                                 </div>
 
                                 <div class="form-group">
                                     <label position="floating">Number</label>
-                                    <input class="form-control" type="text" formControlName="number"
-                                        [class.invalid]="!excoForm.controls.number.valid && (excoForm.controls.number.dirty || submitAttempt)" />
+                                    <input class="form-control" type="text" formControlName="number"  />
                                 </div>
-
+                                <div class="form-group">
+                                    <img style="width: 100px;" [src]="image_url" class="img img-responsive" />
+                                </div>
                                 <div class="form-group">
                                     <label position="floating">Avatar</label>
                                     <input type="file" (change)="onFileChange($event)" />
@@ -77,8 +73,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <button  class="btn btn-primary" shape="round" expand="full"
-                                    (click)="addExcos()">Add Excos </button>
+                                <button class="btn btn-primary" shape="round" expand="full" (click)="editExcos(id)">Update Excos </button>
                             </div>
                         </form>
                     </div><!-- table-responsive -->

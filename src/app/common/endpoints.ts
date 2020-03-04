@@ -8,7 +8,6 @@ export const Endpoint = {
         register: `${BASE_URL}/register`,
     },
 
-
     DASHBOARD: {
         excos: `${BASE_URL}/excos`,
     },

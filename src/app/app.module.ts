@@ -12,6 +12,23 @@ import { FooterComponent } from './site-layout/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddExcosComponent } from './add-excos/add-excos.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+// 1. Import the libs you need
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
+import { EditExcoComponent } from './edit-exco/edit-exco.component';
+
+
+const config = {
+  apiKey: 'AIzaSyCsNM-7ZZibvB-HE5OdftErI5aiJSc55eM',
+  projectId: 'nfcsapp',
+  storageBucket: 'gs://nfcsapp.appspot.com',
+};
 
 @NgModule({
   declarations: [
@@ -22,7 +39,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     SiteLayoutComponent,
     HeaderComponent,
     FooterComponent,
-    AddExcosComponent
+    AddExcosComponent,
+    EditExcoComponent
   ],
   
   imports: [
@@ -31,6 +49,14 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    AngularFireModule.initializeApp(config),
+    AngularFirestoreModule, // firestore
+    AngularFireAuthModule, // auth
+    AngularFireStorageModule, // storage
+
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    ModalModule.forRoot()
 
   ],
 

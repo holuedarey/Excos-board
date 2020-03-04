@@ -7,6 +7,7 @@ import { SiteLayoutComponent } from '../site-layout/site-layout/site-layout.comp
 import { LoginComponent } from '../auth/login/login.component';
 import { RegisterComponent } from '../auth/register/register.component';
 import { AddExcosComponent } from '../add-excos/add-excos.component';
+import { EditExcoComponent } from '../edit-exco/edit-exco.component';
 
 const routes:Routes = [
   {
@@ -26,6 +27,8 @@ const routes:Routes = [
     children: [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'add-excos', component: AddExcosComponent },
+      { path: 'edit-excos', component: EditExcoComponent },
+
 
     ]
   },
